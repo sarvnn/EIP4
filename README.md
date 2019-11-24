@@ -1,61 +1,108 @@
 # EIP4
 Learning DNN
 
-# Assignment:
-Change the model in such a way that after executing the code below, your accuracy print out is more than 99.0
-        score = model.evaluate(X_text, Y_text, verbose=0)
-        print(score)
-        
-        [0.023546614046123023, 0.995]
-        
-# Write your own definitions for the following:
-        
-        //Please disregard the commented sections marked by double slashes. they are for my understanding //
-        
-        Convolution:
-        
-        Convolution is a set of matrix transformations performed piecewise(usually a smaller square matrix) on a multidimensional input data by overlapping the pieces with a predefined matrix of arbitrary size called as the kernel. 
-        
-        ///The output obtained is specifically defined by the kernel used. Convolution is useful in bringing out spatial features from multidimensional data such as images.///
-        
-        Filters/Kernels:
-        
-        Kernels/ Filters are the predefined matrix of arbitrary size, which can filter specific patterns/details present in the input data (such as a horizontal edge, or a gradient) when used to perform the piecewise matrix transformation on the input.
-            
-        Epochs:
-                
-        When a neural network is allowed to learn through the entirety of the training dataset once, it is termed as one epoch. It includes a foward run and a reverse run.
-        
-        //As opposed to a batch which refers to the number of datasets taken per forward and backward pass//
-        
-        1x1 Convolution:
-        
-        Here the kernel size is limited to 1 along two dimensions. This is useful in obtaining single pixel information from multiple channels (or layers).
-        
-        //1x1 convolution is typically used to extract patterns from between different channels like colors//
-        
-        3x3 Convolution:
-        
-        Here the kernel size is 3 along two dimensions. This is useful in collating patterns from a local spatial piece of the input data. Multiple 3x3 convolutions are necessary to obtain patterns present in larger spaces of the input.
-        
-        Feature Maps:
-        
-        Feature maps are individual channels obtained after convolution using a kernel. After convolution, based on the kernel used, distinct patterns/details obtained from the original input will be present in the feature map. 
-        
-        
-        //we will get as many feature maps as the number of filters/kernels we will use on the input.// 
-        
-        
-        Activation Function:
-        
-        Different neurons of the neural network carry different information upon learning from the input dataset. The activation function selects which of the neurons will operate to make a decision on the input signal.
-        
-        //
-        
-        
-        Receptive Field:
-        
-       The receptive field is the piece of the input data that is available for a kernel to do the matrix operation towards convolution.
-       
-       //It is the area of the image that a kernel can see and thus perceive patterns. //
-       
+#Assignment-2
+    
+#copy and paste your Logs for 20 epochs
+    Train on 60000 samples, validate on 10000 samples
+Epoch 1/20
+
+Epoch 00001: LearningRateScheduler setting learning rate to 0.002.
+60000/60000 [==============================] - 40s 662us/step - loss: 0.0897 - acc: 0.9570 - val_loss: 0.0219 - val_acc: 0.9930
+Epoch 2/20
+
+Epoch 00002: LearningRateScheduler setting learning rate to 0.0015163002.
+60000/60000 [==============================] - 9s 146us/step - loss: 0.0864 - acc: 0.9575 - val_loss: 0.0206 - val_acc: 0.9945
+Epoch 3/20
+
+Epoch 00003: LearningRateScheduler setting learning rate to 0.0012210012.
+60000/60000 [==============================] - 9s 142us/step - loss: 0.0828 - acc: 0.9593 - val_loss: 0.0195 - val_acc: 0.9942
+Epoch 4/20
+
+Epoch 00004: LearningRateScheduler setting learning rate to 0.0010219724.
+60000/60000 [==============================] - 9s 143us/step - loss: 0.0818 - acc: 0.9589 - val_loss: 0.0229 - val_acc: 0.9942
+Epoch 5/20
+
+Epoch 00005: LearningRateScheduler setting learning rate to 0.0008787346.
+60000/60000 [==============================] - 9s 144us/step - loss: 0.0800 - acc: 0.9592 - val_loss: 0.0175 - val_acc: 0.9946
+Epoch 6/20
+
+Epoch 00006: LearningRateScheduler setting learning rate to 0.0007707129.
+60000/60000 [==============================] - 9s 145us/step - loss: 0.0806 - acc: 0.9588 - val_loss: 0.0214 - val_acc: 0.9952
+Epoch 7/20
+
+Epoch 00007: LearningRateScheduler setting learning rate to 0.0006863418.
+60000/60000 [==============================] - 9s 143us/step - loss: 0.0777 - acc: 0.9601 - val_loss: 0.0199 - val_acc: 0.9950
+Epoch 8/20
+
+Epoch 00008: LearningRateScheduler setting learning rate to 0.0006186205.
+60000/60000 [==============================] - 9s 144us/step - loss: 0.0775 - acc: 0.9600 - val_loss: 0.0224 - val_acc: 0.9941
+Epoch 9/20
+
+Epoch 00009: LearningRateScheduler setting learning rate to 0.0005630631.
+60000/60000 [==============================] - 9s 145us/step - loss: 0.0765 - acc: 0.9595 - val_loss: 0.0193 - val_acc: 0.9950
+Epoch 10/20
+
+Epoch 00010: LearningRateScheduler setting learning rate to 0.0005166624.
+60000/60000 [==============================] - 9s 144us/step - loss: 0.0766 - acc: 0.9611 - val_loss: 0.0174 - val_acc: 0.9950
+Epoch 11/20
+
+Epoch 00011: LearningRateScheduler setting learning rate to 0.000477327.
+60000/60000 [==============================] - 9s 143us/step - loss: 0.0766 - acc: 0.9602 - val_loss: 0.0169 - val_acc: 0.9953
+Epoch 12/20
+
+Epoch 00012: LearningRateScheduler setting learning rate to 0.0004435573.
+60000/60000 [==============================] - 9s 144us/step - loss: 0.0759 - acc: 0.9610 - val_loss: 0.0182 - val_acc: 0.9947
+Epoch 13/20
+
+Epoch 00013: LearningRateScheduler setting learning rate to 0.0004142502.
+60000/60000 [==============================] - 9s 143us/step - loss: 0.0755 - acc: 0.9601 - val_loss: 0.0174 - val_acc: 0.9950
+Epoch 14/20
+
+Epoch 00014: LearningRateScheduler setting learning rate to 0.0003885759.
+60000/60000 [==============================] - 9s 149us/step - loss: 0.0781 - acc: 0.9584 - val_loss: 0.0174 - val_acc: 0.9947
+Epoch 15/20
+
+Epoch 00015: LearningRateScheduler setting learning rate to 0.0003658983.
+60000/60000 [==============================] - 9s 144us/step - loss: 0.0757 - acc: 0.9604 - val_loss: 0.0157 - val_acc: 0.9953
+Epoch 16/20
+
+Epoch 00016: LearningRateScheduler setting learning rate to 0.0003457217.
+60000/60000 [==============================] - 9s 146us/step - loss: 0.0755 - acc: 0.9599 - val_loss: 0.0169 - val_acc: 0.9956
+Epoch 17/20
+
+Epoch 00017: LearningRateScheduler setting learning rate to 0.000327654.
+60000/60000 [==============================] - 9s 142us/step - loss: 0.0734 - acc: 0.9606 - val_loss: 0.0170 - val_acc: 0.9947
+Epoch 18/20
+
+Epoch 00018: LearningRateScheduler setting learning rate to 0.000311381.
+60000/60000 [==============================] - 9s 145us/step - loss: 0.0739 - acc: 0.9604 - val_loss: 0.0163 - val_acc: 0.9953
+Epoch 19/20
+
+Epoch 00019: LearningRateScheduler setting learning rate to 0.0002966479.
+60000/60000 [==============================] - 9s 143us/step - loss: 0.0733 - acc: 0.9606 - val_loss: 0.0172 - val_acc: 0.9953
+Epoch 20/20
+
+Epoch 00020: LearningRateScheduler setting learning rate to 0.000283246.
+60000/60000 [==============================] - 9s 144us/step - loss: 0.0725 - acc: 0.9616 - val_loss: 0.0171 - val_acc: 0.9959
+    
+    
+    
+#copy and paste the result of your model.evaluate (on test data)
+[0.017078954667203654, 0.9959]
+
+#Strategy you have taken to achieve the said results
+
+The following strategy was adopted
+1. a Receptive field of 5x5 was used to ensure that the data was learned in sufficient detail before going through MaxPooling
+   - For this 2 convolutions with 16 layers each was used as 32 layers was increasing the number of parameters
+2. After this 1x1 convolution is used to extract features unto 10 layers.
+3. Maxpooling reduces the number of parameters to keep it below 15k
+4. after this 4 sequential 16 layer 3x3 convolution is used to learn the features.
+5. This keeps the total number of parameters to close to 14k
+6. A learning rate of 0.002 was used to ensure that accuracy was achieved quickly and properly.
+
+The above strategy led to the best result.
+
+
+
