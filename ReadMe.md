@@ -4,11 +4,10 @@ Learning DNN
 # Assignment 3
 
 Base Network - Final Validation accuracy = 82.69%
+Model created - Best validation accuracy = 85.94%
 
-# Model definition created for the assignment
+# Model Definition
 
-# Definition of the model
-# parameters
 dp=0.1
 
 model = Sequential()
@@ -147,7 +146,6 @@ Epoch 50/50
 585/585 [==============================] - 121s 207ms/step - loss: 0.3007 - acc: 0.8938 - val_loss: 0.4949 - val_acc: 0.8465
 Model took 6078.38 seconds to train
 
-# Accuracy on test data is: 84.65
-
-# Best validation accuracy = 85.94%
-# Epoch 39/50 - val_acc: 0.8594
+// Accuracy on test data is: 84.65
+// Best validation accuracy = 85.94%
+// Epoch 39/50 - val_acc: 0.8594
